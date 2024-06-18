@@ -1,6 +1,9 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Contact {
+public class Contact implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String name;
     private LocalDate dateMet;
     private LocalDate birthday;
@@ -49,4 +52,3 @@ public class Contact {
         return "Name: " + name + ", Met on: " + dateMet + ", Birthday: " + birthday + ", Days until birthday: " + daysUntilBirthday();
     }
 }
-
